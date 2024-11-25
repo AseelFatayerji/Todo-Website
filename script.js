@@ -22,7 +22,7 @@ function checkinfo() {
   let user = document.getElementById("user").value;
   let pass = document.getElementById("pass").value;
   if (user == "Admin" && pass == "ADMIN") {
-    window.location.href = "/board.html";
+    window.location.href = "board.html";
     console.log("done");
   } else {
     let pop = document.getElementById("popup");
