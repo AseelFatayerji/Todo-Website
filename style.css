@@ -46,9 +46,10 @@ input[type="button"]:hover {
 }
 input[type="text"] {
   border-radius: 8px;
-  width: 50%;
-  font-size: large;
-  border-color: var(--dark);
+  width: 70%;
+  font-size: 30px;
+  border-color: transparent;
+  margin: 0px;
 }
 input[type="password"] {
   border-radius: 8px;
@@ -138,6 +139,7 @@ li {
 .trash {
   color: var(--alert);
   padding: 10px;
+  text-align: right;
 }
 .trash:hover {
   color: var(--darker);
@@ -173,6 +175,7 @@ li {
 .base-icon {
   color: var(--darker);
   font-size: 30px;
+  align-content: center;
 }
 
 .alert-icon:hover {
@@ -184,8 +187,8 @@ li {
   cursor: pointer;
 }
 
-.info-icon:hover {
-  color: var(--info);
+.light-icon:hover {
+  color: var(--light);
   cursor: pointer;
 }
 .alert-text {
@@ -223,9 +226,8 @@ li {
   font-family: Blippo, fantasy;
   font-size: 30px;
   text-align: left;
-  padding: 20px;
-  border-radius: 10px 10px 0px 0px;
-  width: max-content;
+  padding-left: 30px;
+  padding-top: 10px;
 }
 .cardbody {
   font-family: Bradley Hand, cursive;
@@ -234,11 +236,10 @@ li {
 }
 .menubody {
   font-family: Bradley Hand, cursive;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
-  width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .dots {
   background-color: white;
@@ -256,7 +257,7 @@ li {
   justify-content: space-between;
 }
 .gap {
-  gap: 20px;
+  gap: 10px;
 }
 @media (min-width: 280px) and (max-width: 768px) {
   .card {

@@ -38,7 +38,7 @@ function additem() {
   let check = document.createElement("i");
   let bullet = document.createElement("i");
 
-  bullet.className = "fa-solid fa-star-of-life item";
+  bullet.className = "fa-solid fa-solid fa-circle-dot item";
 
   node.className = "text";
 
