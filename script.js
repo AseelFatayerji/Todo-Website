@@ -17,7 +17,7 @@ function removeitem(event) {
 function checkinfo() {
   let user = document.getElementById("user").value;
   let pass = document.getElementById("pass").value;
-  if (user == "AdminSEF123" && pass == "SeF@ctORy$$456") {
+  if (user == "AdminSEF123" && pass == "ADMIN") {
     window.location.href = "/board.html";
     console.log("done");
   } else {

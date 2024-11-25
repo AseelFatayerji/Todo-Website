@@ -68,7 +68,7 @@ li{
 }
 .background {
   background-image: url("./Images/dots.png");
-  background-size: contain;
+  background-size: cover;
 }
 .hide{
   display: none;
@@ -99,6 +99,7 @@ li{
 }
 .floatcontainer{
     display: flex;
+    height: 100vh;
 }
 .floatchild{
     flex: 1;
@@ -181,10 +182,9 @@ li{
 }
 .todocard {
   font-family: Bradley Hand, cursive;
-  height: fit-content;
-  width: 40%;
   padding: 20px;
-  margin-left: 20%;
+  margin-left: 20%;  
+  background-color: rgba(255, 255, 255, 0.562);
 }
 .cardheader {
   color: #6C6A6D;
@@ -198,13 +198,7 @@ li{
 .cardbody {
   font-family: Bradley Hand, cursive;
   padding: 20px;
-  border-radius: 0px 0px 8px 8px;
-}
-.cardbody2 {
-  font-family: Bradley Hand, cursive;
-  font-size: larger;
-  border-radius: 0px 0px 8px 8px;
-  padding: 11px;
+  border-radius:8px;
 }
 .menubody{
   font-family: Bradley Hand, cursive;
