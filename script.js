@@ -3,11 +3,10 @@ let imp = 0;
 let date = 0;
 
 window.onload = function () {
-  if (sessionStorage.getItem("user") == "user") {
+  if (sessionStorage.getItem("user").length == 0) {
     count = 0;
     return;
   }
-  console.log(sessionStorage.getItem("user"));
   document.getElementById("list").innerHTML = sessionStorage.getItem("user");
 };
 function removeitem(event) {
@@ -15,6 +14,8 @@ function removeitem(event) {
   let item = document.getElementById(id);
   item.remove();
   count--;
+  sessionStorage.setItem("user", document.getElementById("list").innerHTML);
+  sessionStorage.setItem("count", count);
 }
 
 function checkinfo() {
@@ -51,8 +52,6 @@ function additem() {
   node.appendChild(bullet);
   node.appendChild(document.createTextNode(item));
   node.appendChild(check);
-  document.getElementById("list").appendChild(node);
-
   if (date == 1) {
     let dates = document.createElement("INPUT");
     dates.setAttribute("type", "date");
