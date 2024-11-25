@@ -19,6 +19,7 @@ function removeitem(event) {
 }
 function removeitem2(event) {
   let id = event.target.parentElement.parentElement.id;
+  let item = document.getElementById(id);
   item.remove();
   count--;
   sessionStorage.setItem("user", document.getElementById("list").innerHTML);
