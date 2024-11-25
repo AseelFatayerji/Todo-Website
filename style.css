@@ -13,8 +13,10 @@
   font-family: Bradley Hand, cursive;
   margin: 0px;
 }
+html,
 body {
   background-color: var(--main);
+  height: 100%;
 }
 div h3 i:hover {
   background-color: var(--main);
@@ -213,7 +215,6 @@ li {
 }
 .todocard {
   font-family: Bradley Hand, cursive;
-  padding: 20px;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.562);
 }
@@ -254,7 +255,7 @@ li {
 .space-between {
   justify-content: space-between;
 }
-.gap{
+.gap {
   gap: 20px;
 }
 @media (min-width: 280px) and (max-width: 768px) {
