@@ -1,18 +1,21 @@
 let count = 0;
-window.onload = function() {
-    if ( sessionStorage.getItem('user') == "user"){
-        count = 0
-        return
-    }
-    console.log(sessionStorage.getItem('user'));
-    document.getElementById('list').innerHTML = sessionStorage.getItem('user');
+let imp = 0;
+let date = 0;
+
+window.onload = function () {
+  if (sessionStorage.getItem("user") == "user") {
+    count = 0;
+    return;
+  }
+  console.log(sessionStorage.getItem("user"));
+  document.getElementById("list").innerHTML = sessionStorage.getItem("user");
+};
+function removeitem(event) {
+  let id = event.target.parentElement.id + "main";
+  let item = document.getElementById(id);
+  item.remove();
+  count--;
 }
-function removeitem(event) {    
-    let id = event.target.parentElement.id + "main";
-    let item = document.getElementById(id);
-    item.remove();
-    count--;
-  };
 
 function checkinfo() {
   let user = document.getElementById("user").value;
@@ -25,9 +28,9 @@ function checkinfo() {
     pop.className = "show";
   }
 }
-function closepop(){
+function closepop() {
   let pop = document.getElementById("popup");
-    pop.className = "hide";
+  pop.className = "hide";
 }
 function additem() {
   let node = document.createElement("li");
@@ -37,39 +40,43 @@ function additem() {
 
   bullet.className = "fa-solid fa-star-of-life item";
 
-  node.className ="text"
-  
-  check.innerHTML = '<i class="fa-solid fa-trash-can trash" onclick="removeitem(event)"> </i>'
-  node.id = count +"main";
-  check.id = count+"";
+  node.className = "text";
+
+  check.innerHTML =
+    '<i class="fa-solid fa-trash-can trash" onclick="removeitem(event)"> </i>';
+  node.id = count + "main";
+  check.id = count + "";
   count++;
 
-  node.appendChild(bullet)
+  node.appendChild(bullet);
   node.appendChild(document.createTextNode(item));
   node.appendChild(check);
   document.getElementById("list").appendChild(node);
 
-  if (document.getElementById("dates").checked) {
+  if (date == 1) {
     let dates = document.createElement("INPUT");
     dates.setAttribute("type", "date");
     dates.setAttribute("value", "02-28-2024");
-    node.insertBefore(dates,node.lastChild)
+    node.insertBefore(dates, node.lastChild);
   }
-  if (document.getElementById("imp").checked) {
+  if (imp == 1) {
     let alert = document.createElement("i");
     alert.className = "fa-solid fa-circle-exclamation item";
     node.className = "important";
     node.replaceChild(alert, node.firstChild);
-
   }
-    node.appendChild(check);
-    document.getElementById("list").appendChild(node);
-    sessionStorage.setItem('user', document.getElementById("list").innerHTML)
-    sessionStorage.setItem('count',count)
+  node.appendChild(check);
+  document.getElementById("list").appendChild(node);
+  sessionStorage.setItem("user", document.getElementById("list").innerHTML);
+  sessionStorage.setItem("count", count);
 }
-function markImp(){
-  document.getElementById("IMP").className = "fa-solid fa-circle-exclamation base-icon alert-text";
+function markImp() {
+  imp = 1;
+  document.getElementById("IMP").className =
+    "fa-solid fa-circle-exclamation base-icon alert-text";
 }
-function setDate(){
-  document.getElementById("DATE").className = "fa-solid fa-calendar-days base-icon accent-text";
+function setDate() {
+  date = 1;
+  document.getElementById("DATE").className =
+    "fa-solid fa-calendar-days base-icon accent-text";
 }
