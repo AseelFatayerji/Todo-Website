@@ -67,3 +67,9 @@ function additem() {
     sessionStorage.setItem('user', document.getElementById("list").innerHTML)
     sessionStorage.setItem('count',count)
 }
+function markImp(){
+  document.getElementById("IMP").className = "fa-solid fa-circle-exclamation base-icon alert-text";
+}
+function setDate(){
+  document.getElementById("DATE").className = "fa-solid fa-calendar-days base-icon accent-text";
+}

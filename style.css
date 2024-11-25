@@ -172,17 +172,25 @@ li {
   color: var(--darker);
   font-size: 30px;
 }
+
 .alert-icon:hover {
   color: var(--alert);
   cursor: pointer;
 }
-.accent-icon:hover{
+.accent-icon:hover {
   color: var(--accent);
   cursor: pointer;
 }
-.info-icon:hover{
+
+.info-icon:hover {
   color: var(--info);
   cursor: pointer;
+}
+.alert-text {
+  color: var(--alert);
+}
+.accent-text {
+  color: var(--accent);
 }
 .card {
   position: fixed;
@@ -227,7 +235,7 @@ li {
   font-family: Bradley Hand, cursive;
   padding: 20px;
   text-align: left;
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -242,6 +250,12 @@ li {
 }
 .space-even {
   justify-content: space-evenly;
+}
+.space-between {
+  justify-content: space-between;
+}
+.gap{
+  gap: 20px;
 }
 @media (min-width: 280px) and (max-width: 768px) {
   .card {
