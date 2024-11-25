@@ -13,23 +13,20 @@
     <script src="./script.js"></script>
   </head>
   <body class="background">
-    <div class="floatcontainer">
+    <div class="floatcontainer fullheight">
       <div class="menu">
         <div class="cardheader">Menu</div>
-        <div class="menubody">
-          <input type="text" id="item" />
-          <br />
-          <input type="checkbox" class="checkbox-round" id="imp" /> Important
-          <input type="checkbox" class="checkbox-round" id="dates" /> Date
-        </div>
-        <div class="right">
-          <h3>
-            <i class="fa-solid fa-pen icon dark" onclick="additem()"></i>
-          </h3>
-        </div>
       </div>
       <div class="todocard floatchild">
         <div class="cardheader">Todo List</div>
+        <div class="menubody">
+          <input type="text" id="item" />
+          <div class="floatcontainer">
+            <input type="checkbox" class="checkbox-round" id="imp" /> Important
+            <input type="checkbox" class="checkbox-round" id="dates" /> Date
+            <i class="fa-solid fa-pen icon dark" onclick="additem()"></i>
+          </div>
+        </div>
         <div class="cardbody">
           <ul id="list"></ul>
         </div>
