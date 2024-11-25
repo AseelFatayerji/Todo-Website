@@ -21,10 +21,19 @@
         <div class="cardheader">Todo List</div>
         <div class="menubody">
           <input type="text" id="item" />
-          <div class="floatcontainer">
-            <input type="checkbox" class="checkbox-round" id="imp" /> Important
-            <input type="checkbox" class="checkbox-round" id="dates" /> Date
-            <i class="fa-solid fa-pen icon dark" onclick="additem()"></i>
+          <div class="floatcontainer space-even">
+            <i
+              class="fa-solid fa-circle-exclamation base-icon alert-icon"
+              onclick="markImp()"
+            ></i>
+            <i
+              class="fa-solid fa-calendar-days base-icon accent-icon"
+              onclick="setDate()"
+            ></i>
+            <i
+              class="fa-solid fa-pen-to-square base-icon info-icon"
+              onclick="additem()"
+            ></i>
           </div>
         </div>
         <div class="cardbody">
