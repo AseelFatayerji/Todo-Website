@@ -44,12 +44,11 @@ input[type="button"]:hover {
   color: var(--light);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-input[type="text"] {
+.textinput {
   border-radius: 8px;
-  width: 70%;
-  font-size: 30px;
-  border-color: transparent;
-  margin: 0px;
+  width: 100%;
+  font-size: large;
+  border-color: var(--dark);
 }
 input[type="password"] {
   border-radius: 8px;
@@ -67,6 +66,13 @@ ul {
 }
 li {
   font-size: large;
+}
+.input{
+  border-radius: 8px;
+  width: 70%;
+  font-size: 30px;
+  border-color: transparent;
+  margin: 0px;
 }
 .background {
   background-image: url("./Images/dots.png");
