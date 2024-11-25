@@ -6,9 +6,9 @@
   --alert: #ff70a6;
   --info: #cfbaf0;
   --accent: #70d6ff;
-  --correct: #e9ff70;
+  --correct: #beff93;
 }
-
+S
 * {
   font-family: Bradley Hand, cursive;
   margin: 0px;
@@ -145,9 +145,17 @@ li {
 .trash {
   color: var(--alert);
   padding: 10px;
-  text-align: right;
+  font-size: 20px;
 }
 .trash:hover {
+  color: var(--darker);
+}
+.check {
+  color: var(--correct);
+  padding: 10px;
+  font-size: 20px;
+}
+.check:hover {
   color: var(--darker);
 }
 .important {
@@ -163,7 +171,7 @@ li {
 .text {
   color: var(--darker);
   font-weight: bolder;
-  font-size: larger;
+  font-size: 25px;
 }
 
 .icon {

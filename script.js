@@ -17,6 +17,13 @@ function removeitem(event) {
   sessionStorage.setItem("user", document.getElementById("list").innerHTML);
   sessionStorage.setItem("count", count);
 }
+function removeitem2(event) {
+  let id = event.target.parentElement.parentElement.id;
+  item.remove();
+  count--;
+  sessionStorage.setItem("user", document.getElementById("list").innerHTML);
+  sessionStorage.setItem("count", count);
+}
 
 function checkinfo() {
   let user = document.getElementById("user").value;
@@ -36,6 +43,7 @@ function closepop() {
 function additem() {
   let node = document.createElement("li");
   let item = document.getElementById("item").value;
+  let trash = document.createElement("i");
   let check = document.createElement("i");
   let bullet = document.createElement("i");
 
@@ -43,15 +51,19 @@ function additem() {
 
   node.className = "text";
 
+  trash.innerHTML =
+    '<i class="fa-solid fa-trash-can trash" onclick="removeitem2(event)"> </i>';
   check.innerHTML =
-    '<i class="fa-solid fa-trash-can trash" onclick="removeitem(event)"> </i>';
+    '<i class="fa-solid fa-circle-check check" onclick="removeitem(event)"> </i>';
   node.id = count + "main";
   check.id = count + "";
   count++;
 
   node.appendChild(bullet);
   node.appendChild(document.createTextNode(item));
+  node.appendChild(trash);
   node.appendChild(check);
+
   if (date == 1) {
     let dates = document.createElement("INPUT");
     dates.setAttribute("type", "date");
